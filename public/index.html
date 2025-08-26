@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #d81b60;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ff4081;
+        }
+        p {
+            font-size: 1.5em;
+            color: #880e4f;
+        }
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background-color: #ffc107;
+            transform: rotate(45deg);
+            opacity: 0;
+            animation: fall 5s linear infinite;
+        }
+        .confetti-piece:nth-child(2) { background-color: #e91e63; left: 10%; animation-delay: 1s; }
+        .confetti-piece:nth-child(3) { background-color: #9c27b0; left: 20%; animation-delay: 2s; }
+        .confetti-piece:nth-child(4) { background-color: #00bcd4; left: 30%; animation-delay: 3s; }
+        .confetti-piece:nth-child(5) { background-color: #8bc34a; left: 40%; animation-delay: 4s; }
+        .confetti-piece:nth-child(6) { background-color: #ff5722; left: 50%; animation-delay: 5s; }
+        .confetti-piece:nth-child(7) { background-color: #f44336; left: 60%; animation-delay: 6s; }
+        .confetti-piece:nth-child(8) { background-color: #673ab7; left: 70%; animation-delay: 7s; }
+        .confetti-piece:nth-child(9) { background-color: #ff9800; left: 80%; animation-delay: 8s; }
+        .confetti-piece:nth-child(10) { background-color: #2196f3; left: 90%; animation-delay: 9s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(45deg); opacity: 1; }
+            100% { transform: translateY(120vh) rotate(45deg); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+    <div class="container">
+        <h1>Happy Birthday! 🎉</h1>
+        <p>Wishing you a day filled with joy, love, and laughter.</p>
+        <p>Have a wonderful year ahead!</p>
+    </div>
+</body>
+</html>
